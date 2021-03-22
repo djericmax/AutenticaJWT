@@ -1,14 +1,16 @@
-<h1>Autentica Token</h1>
+<div class="container">
+  <h1>Autentica Token</h1>
 
-<div class="container-fluid" *ngIf="isUserAuthenticated()">
-  <h4>Bem vindo<br><br>Você está logado no sistema.</h4>
-  <div class="container-fluid" style="margin-top: 10%;">
-    <a href="customers" class="btn btn-outline-info"> Clientes </a><br><br>
-    <a href="#" (click)="logout()" class="btn btn-outline-info"> Sair </a>
+  <div class="float-left" *ngIf="isUserAuthenticated()">
+    <h5>Bem vindo<br><br>Você está logado no sistema.</h5>
+    <div class="container-fluid" style="margin-top: 10%;">
+      <div class="float-left"><a href="customers" class="btn btn-outline-info"> Clientes </a><br><br></div>
+      <div class="float-right"><a href="#" (click)="logout()" class="btn btn-outline-danger"> Sair </a></div>
+    </div>
   </div>
-</div>
 
-<div class="container-fluid" *ngIf="!isUserAuthenticated()">
-  <a href="customers" class="btn btn-outline-info"> Clientes </a><br><br>
-  <a href="login" class="btn btn-outline-info"> Entrar </a>
+  <div class="container" *ngIf="!isUserAuthenticated()">
+    <div class="float-left" style="width: 150px;"><a href="customers" class="btn btn-outline-info"> Clientes </a><br><br></div>
+    <div class="float-right" style="width: 150px;"><a href="login" class="btn btn-outline-success"> Entrar </a></div>
+  </div>
 </div>
