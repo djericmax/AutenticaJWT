@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
       'usuario': form.value.usuario,
       'senha': form.value.senha
     }
+
     this.http.post("https://localhost:5001/api/auth/login", credentials)
     .subscribe(response =>{
       const token = (<any>response).token;

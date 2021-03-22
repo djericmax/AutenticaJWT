@@ -14,5 +14,7 @@ namespace AutenticaJwt.Controllers
         [Authorize(Roles = "Manager")]
         public IEnumerable<string> Get()
             => new string[] { "Batman", "Superman" };
+
+        
     }
 }

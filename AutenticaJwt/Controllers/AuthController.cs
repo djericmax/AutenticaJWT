@@ -31,7 +31,7 @@ namespace AutenticaJwt.Controllers
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.Usuario),
-                    new Claim(ClaimTypes.Role, "Manager")
+                    new Claim(ClaimTypes.Role, "operador")
                 };
 
                 var tokenOptions = new JwtSecurityToken(
