@@ -4,11 +4,11 @@
   <h4>Bem vindo<br><br>Você está logado no sistema.</h4>
   <div class="container-fluid" style="margin-top: 10%;">
     <a href="customers" class="btn btn-outline-info"> Clientes </a><br><br>
-    <a href="logout" class="btn btn-outline-info"> Logout </a>
+    <a href="#" (click)="logout()" class="btn btn-outline-info"> Sair </a>
   </div>
 </div>
 
 <div class="container-fluid" *ngIf="!isUserAuthenticated()">
   <a href="customers" class="btn btn-outline-info"> Clientes </a><br><br>
-  <a href="login" class="btn btn-outline-info"> Login </a>
+  <a href="login" class="btn btn-outline-info"> Entrar </a>
 </div>
